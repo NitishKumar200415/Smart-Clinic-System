@@ -1,0 +1,52 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: smart-clinic
+
+  # ─── H2 (default) ───────────────────────────────────────────────────────────
+  datasource:
+    url: jdbc:h2:mem:clinicdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  # ─── MySQL (optional) ───────────────────────────────────────────────────────
+  # Uncomment the block below and comment out the H2 block above.
+  #
+  # datasource:
+  #   url: jdbc:mysql://localhost:3306/smart_clinic?useSSL=false&serverTimezone=UTC
+  #   driver-class-name: com.mysql.cj.jdbc.Driver
+  #   username: root
+  #   password: your_password
+  #
+  # jpa:
+  #   database-platform: org.hibernate.dialect.MySQL8Dialect
+  #   hibernate:
+  #     ddl-auto: update
+  #   show-sql: true
+
+# ─── JWT (mock / development) ───────────────────────────────────────────────
+app:
+  jwt:
+    secret: SmartClinicSuperSecretKey2024_32CharMinimum!
+    expiration-ms: 86400000   # 24 hours
+
+logging:
+  level:
+    com.clinic: DEBUG
