@@ -1,115 +1,120 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-<modelVersion>4.0.0</modelVersion>
-<parent>
-<groupId>org.springframework.boot</groupId>
-<artifactId>spring-boot-starter-parent</artifactId>
-<version>3.2.5</version>
-<relativePath/>
-</parent>
-<groupId>com.clinic</groupId>
-<artifactId>smart-clinic</artifactId>
-<version>1.0.0</version>
-<name>smart-clinic</name>
-<description>Smart Clinic System - Patient Continuity, Prescription Tracking, Reminder Engine</description>
-<properties>
-<java.version>23</java.version>
-<jjwt.version>0.11.5</jjwt.version>
-<lombok.version>1.18.32</lombok.version>
-</properties>
-<dependencies>
-<!--  Spring Web  -->
-<dependency>
-<groupId>org.springframework.boot</groupId>
-<artifactId>spring-boot-starter-web</artifactId>
-</dependency>
-<!--  Spring Data JPA  -->
-<dependency>
-<groupId>org.springframework.boot</groupId>
-<artifactId>spring-boot-starter-data-jpa</artifactId>
-</dependency>
-<!--  Validation  -->
-<dependency>
-<groupId>org.springframework.boot</groupId>
-<artifactId>spring-boot-starter-validation</artifactId>
-</dependency>
-<!--  H2 Database (default)  -->
-<dependency>
-<groupId>com.h2database</groupId>
-<artifactId>h2</artifactId>
-<scope>runtime</scope>
-</dependency>
-<!--  MySQL (optional - comment out H2 and uncomment this)  -->
-<!-- 
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.5</version>
+        <relativePath/>
+    </parent>
+    <groupId>com.clinic</groupId>
+    <artifactId>smart-clinic</artifactId>
+    <version>1.0.0</version>
+    <name>smart-clinic</name>
+    <description>Smart Clinic System - Patient Continuity, Prescription Tracking, Reminder Engine</description>
+    <properties>
+        <java.version>23</java.version>
+        <jjwt.version>0.11.5</jjwt.version>
+        <lombok.version>1.18.32</lombok.version>
+    </properties>
+    <dependencies>
+        <!--  Spring Web  -->
         <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--  Spring Data JPA  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!--  Validation  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <!--  H2 Database (default)  -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
-         -->
-<!--  Lombok  -->
-<dependency>
-<groupId>org.projectlombok</groupId>
-<artifactId>lombok</artifactId>
-<optional>true</optional>
-</dependency>
-<!--  JWT  -->
-<dependency>
-<groupId>io.jsonwebtoken</groupId>
-<artifactId>jjwt-api</artifactId>
-<version>${jjwt.version}</version>
-</dependency>
-<dependency>
-<groupId>io.jsonwebtoken</groupId>
-<artifactId>jjwt-impl</artifactId>
-<version>${jjwt.version}</version>
-<scope>runtime</scope>
-</dependency>
-<dependency>
-<groupId>io.jsonwebtoken</groupId>
-<artifactId>jjwt-jackson</artifactId>
-<version>${jjwt.version}</version>
-<scope>runtime</scope>
-</dependency>
-<!--  Test  -->
-<dependency>
-<groupId>org.springframework.boot</groupId>
-<artifactId>spring-boot-starter-test</artifactId>
-<scope>test</scope>
-</dependency>
-</dependencies>
-<build>
-<plugins>
-<!--  Explicitly wire Lombok annotation processor (required for Java 21+)  -->
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-compiler-plugin</artifactId>
-<configuration>
-<source>${java.version}</source>
-<target>${java.version}</target>
-<annotationProcessorPaths>
-<path>
-<groupId>org.projectlombok</groupId>
-<artifactId>lombok</artifactId>
-<version>${lombok.version}</version>
-</path>
-</annotationProcessorPaths>
-<compilerArgs>
-<arg>-parameters</arg>
-</compilerArgs>
-</configuration>
-</plugin>
-<plugin>
-<groupId>org.springframework.boot</groupId>
-<artifactId>spring-boot-maven-plugin</artifactId>
-<configuration>
-<excludes>
-<exclude>
-<groupId>org.projectlombok</groupId>
-<artifactId>lombok</artifactId>
-</exclude>
-</excludes>
-</configuration>
-</plugin>
-</plugins>
-</build>
+        <!--  MySQL (optional - comment out H2 and uncomment this)  -->
+        <!--
+                <dependency>
+                    <groupId>com.mysql</groupId>
+                    <artifactId>mysql-connector-j</artifactId>
+                    <scope>runtime</scope>
+                </dependency>
+                 -->
+        <!--  Spring Security  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <!--  Lombok  -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--  JWT  -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>${jjwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>${jjwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>${jjwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!--  Test  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <!--  Explicitly wire Lombok annotation processor (required for Java 21+)  -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

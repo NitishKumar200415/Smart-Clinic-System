@@ -7,6 +7,7 @@ com\clinic\controller\DoctorController.class
 com\clinic\model\Patient.class
 com\clinic\controller\AuthController.class
 com\clinic\repository\DoctorRepository.class
+com\clinic\config\UserPrincipal.class
 com\clinic\service\AuthService.class
 com\clinic\repository\ReminderLogRepository.class
 com\clinic\dto\OtpVerifyRequest.class
@@ -21,6 +22,7 @@ com\clinic\service\PatientService.class
 com\clinic\dto\PrescriptionRequest.class
 com\clinic\model\Prescription.class
 com\clinic\dto\MedicationResponse$MedicationResponseBuilder.class
+com\clinic\config\SecurityConfig.class
 com\clinic\model\Doctor.class
 com\clinic\controller\PatientController.class
 com\clinic\dto\PatientResponse$PatientResponseBuilder.class
@@ -29,6 +31,7 @@ com\clinic\dto\PrescriptionResponse.class
 com\clinic\repository\PrescriptionRepository.class
 com\clinic\dto\MedicationRequest.class
 com\clinic\dto\PatientRequest.class
+com\clinic\config\JwtAuthFilter.class
 com\clinic\model\Medication$MedicationBuilder.class
 com\clinic\service\PrescriptionService.class
 com\clinic\dto\OtpRequest.class

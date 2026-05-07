@@ -9,6 +9,7 @@ C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\control
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\config\ResourceNotFoundException.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\dto\DoctorRequest.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\service\DoctorService.java
+C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\config\UserPrincipal.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\controller\PrescriptionController.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\SmartClinicApplication.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\dto\PatientRequest.java
@@ -16,6 +17,7 @@ C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\dto\Pre
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\model\Medication.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\dto\DoctorResponse.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\repository\DoctorRepository.java
+C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\config\JwtAuthFilter.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\dto\OtpRequest.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\repository\PrescriptionRepository.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\config\GlobalExceptionHandler.java
@@ -30,4 +32,5 @@ C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\service
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\controller\AuthController.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\service\PatientService.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\dto\MedicationRequest.java
+C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\config\SecurityConfig.java
 C:\Users\HP\Downloads\smart-clinic\smart-clinic\src\main\java\com\clinic\dto\AuthResponse.java
